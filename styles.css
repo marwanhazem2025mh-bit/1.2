@@ -252,13 +252,13 @@ html, body {
 .env-bottom {
   position:absolute; bottom:0; left:0; right:0; height:85px;
   background:linear-gradient(160deg,#1e1205,#2e1a08);
-  border-left:130px solid #2a1607;
-  border-right:130px solid #2a1607;
+  border-left:110px solid #2a1607;
+  border-right:110px solid #2a1607;
   border-bottom:85px solid #1e1205;
   width:0; height:0;
   border-bottom:85px solid #1e1205;
-  border-left:130px solid transparent;
-  border-right:130px solid transparent;
+  border-left:110px solid transparent;
+  border-right:110px solid transparent;
   bottom:0; position:absolute; left:0; right:0; margin:auto;
 }
 .env-body::before {
@@ -271,8 +271,8 @@ html, body {
   content:'';
   position:absolute; bottom:0; left:0;
   width:0; height:0;
-  border-left:130px solid #0f0802;
-  border-right:130px solid #0f0802;
+  border-left:110px solid #0f0802;
+  border-right:110px solid #0f0802;
   border-top:85px solid transparent;
   border-bottom:0;
 }

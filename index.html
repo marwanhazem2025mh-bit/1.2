@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hekayetna · حكايتنا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+  <div class="particles" id="particles"></div>
+
+  <!-- PAGE 1: Entry -->
+  <div class="page active" id="page-entry">
+    <div class="entry-inner">
+      <div class="logo-mark">✦</div>
+      <h1 class="brand">Hekayetna</h1>
+      <p class="brand-arabic">حكايتنا</p>
+      <p class="brand-tagline">Our Story · Our Love · Our World</p>
+      <div class="divider-line"></div>
+      <p class="entry-hint">Enter your secret key</p>
+      <div class="input-wrap">
+        <input type="password" id="passInput" class="pass-input" placeholder="••••••" autocomplete="off" maxlength="20">
+        <div class="input-glow"></div>
+      </div>
+      <div id="passError" class="pass-error"></div>
+      <button class="cta-btn" id="entryBtn">
+        <span class="btn-text">Open My Heart</span>
+        <span class="btn-icon">→</span>
+      </button>
+      <p class="entry-footer">Made with love, just for you.</p>
+    </div>
+  </div>
+
+  <!-- PAGE 2: Letter -->
+  <div class="page" id="page-letter">
+    <div class="page-inner">
+      <div class="section-eyebrow">A message from the heart</div>
+      <h2 class="section-title">My Love Letter<br><em>For You</em></h2>
+      <div class="divider-ornament">— ✦ —</div>
+      <p class="letter-instruction">Touch the envelope to reveal your surprise</p>
+
+      <div class="envelope-scene" id="envelopeScene">
+        <div class="envelope" id="envelope">
+          <div class="env-shadow"></div>
+          <div class="env-body">
+            <div class="env-flap" id="envFlap"></div>
+            <div class="env-bottom"></div>
+            <div class="env-left"></div>
+            <div class="env-right"></div>
+            <div class="env-seal" id="envSeal">❤</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="letter-reveal" id="letterReveal">
+        <div class="letter-paper">
+          <div class="letter-header">✦</div>
+          <!-- CLIENT LETTER GOES HERE -->
+          <p class="letter-salute">My Dearest Love,</p>
+          <p>From the very first moment I saw you, I knew something extraordinary had begun. Your presence has become the most beautiful part of my every single day.</p>
+          <p>Every laugh we share, every quiet moment between us — I hold all of it close to my heart, and I always will.</p>
+          <p>You are not just someone I love. You are someone I choose, again and again, every morning I wake up.</p>
+          <p>This is our story. And it is the greatest one I have ever known.</p>
+          <p class="letter-sign">Forever and always,<br><em>Your Love 💛</em></p>
+        </div>
+      </div>
+
+      <div class="btn-row hidden" id="letterNextWrap">
+        <button class="cta-btn" onclick="goTo('page-video')">
+          <span class="btn-text">Next Surprise</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 3: Video -->
+  <div class="page" id="page-video">
+    <div class="page-inner">
+      <div class="section-eyebrow">A song for you</div>
+      <h2 class="section-title">Listen To This,<br><em>My Lovely</em></h2>
+      <div class="divider-ornament">— ✦ —</div>
+      <div class="video-frame">
+        <iframe id="videoFrame" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="btn-row">
+        <button class="cta-btn" onclick="goTo('page-heart')">
+          <span class="btn-text">Next Surprise</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: Heart Message -->
+  <div class="page" id="page-heart">
+    <div class="page-inner">
+      <div class="section-eyebrow">A special message</div>
+      <h2 class="section-title">You Mean<br><em>Everything</em></h2>
+      <div class="divider-ornament">— ✦ —</div>
+      <div class="heart-layout">
+        <div class="heart-photo top-photo" id="heartPhotoTop">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop&crop=face" alt="">
+        </div>
+        <div class="center-heart-wrap">
+          <div class="center-heart" id="centerHeart">
+            <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 85 C50 85 5 55 5 28 C5 14 16 5 28 5 C37 5 45 10 50 18 C55 10 63 5 72 5 C84 5 95 14 95 28 C95 55 50 85 50 85Z" fill="currentColor"/>
+            </svg>
+            <span class="heart-msg-text">You Mean Everything To Me</span>
+          </div>
+        </div>
+        <div class="heart-photo bottom-photo" id="heartPhotoBottom">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="cta-btn" onclick="goTo('page-gallery')">
+          <span class="btn-text">Next Surprise</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 5: Gallery -->
+  <div class="page" id="page-gallery">
+    <div class="page-inner">
+      <div class="section-eyebrow">Moments together</div>
+      <h2 class="section-title">Our Special<br><em>Photos</em></h2>
+      <div class="divider-ornament">— ✦ —</div>
+      <div class="gallery-container">
+        <div class="gallery-track" id="galleryTrack">
+          <!-- slides injected by JS -->
+        </div>
+        <button class="gallery-nav prev" id="galleryPrev" onclick="galleryMove(-1)">‹</button>
+        <button class="gallery-nav next" id="galleryNext" onclick="galleryMove(1)">›</button>
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+      <div class="btn-row">
+        <button class="cta-btn outline-btn" onclick="resetAndHome()">
+          <span class="btn-text">Back to Beginning</span>
+          <span class="btn-icon">↩</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

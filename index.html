@@ -9,7 +9,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+	<audio id="myAudio" src="Agheeb.mp3" preload="auto"></audio>
+<script>
+        // Set volume to 50% (0.5)
+        const myAudio = document.getElementById('myAudio');
+        myAudio.volume = 0.5;
+		// Play when user clicks anywhere
+		document.body.addEventListener('click', function() {
+		document.getElementById('myAudio').play();
+		});
+</script>
   <canvas id="stars"></canvas>
   <div class="particles" id="particles"></div>
 

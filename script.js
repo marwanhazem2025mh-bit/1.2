@@ -12,7 +12,7 @@ const CONFIG = {
   // 🎵 YouTube video ID
   // Full URL example: https://www.youtube.com/watch?v=B6-nKgWhSjc
   // Paste only the part after v=
-  youtubeId: "lRGtrP6rOmk?si=NpW-XcW6Jfs-NUUl",
+  youtubeId: "B6-nKgWhSjc",
 
   // 💑 Heart page — two photo URLs (her photo, his photo)
   heartPhotos: [
